@@ -6,6 +6,7 @@ server.all("/", (req, res) => {
 	sites.forEach(site => 
 		fetch(site)
 			.then(res => {
+				const domain = new URL(site).hostname;
 				if (!res.ok)
 					fetch(WEBHOOK, {
 						method: "post",
@@ -14,12 +15,12 @@ server.all("/", (req, res) => {
 							content: `<@${USER}>`,
 							embeds: [{
 								title: "SITE IS DOWN",
-								description: `\`${new URL(site).hostname}\` is down: ${res.status}`,
+								description: `\`${domain}\` is down: ${res.status}`,
 								color: 16013612
 							}]
 						}),
 					});
-				console.log(`${site}: ${res.status}`);
+				console.log(`${domain}: ${res.status}`);
 			})
 			.catch(e => console.log(e.message))
 	);
