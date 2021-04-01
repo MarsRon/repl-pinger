@@ -1,0 +1,23 @@
+{
+	"name": "pinger",
+	"version": "1.0.0",
+	"description": "Uptimerobot pinger on replit.com",
+	"main": "index.js",
+	"scripts": {
+		"start": "node ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MarsRon/pinger.git"
+	},
+	"author": "MarsRon",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/MarsRon/pinger/issues"
+	},
+	"homepage": "https://github.com/MarsRon/pinger#readme",
+	"dependencies": {
+		"express": "^4.17.1",
+		"node-fetch": "^2.6.1"
+	}
+}
