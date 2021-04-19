@@ -1,22 +1,23 @@
+require("dotenv").config();
 const axios = require("axios").default;
-const app = require("express")();
+const sites = process.env.SITES.split(" ");
 
-app.all("/", (req, res) => {
-	for (const site of process.env.SITES.split(" "))
-		axios.head(site).then(res => {
-			const domain = new URL(site).hostname;
-			if (res < 200 || res >= 300)
-				axios.post(process.env.WEBHOOK, {
-					content: `<@${process.env.USERID}>`,
+require("http").createServer((req, res) => {
+	for (const site of sites)
+		axios.head(site, { timeout: 5000 })
+			.then(res => console.log(`${new URL(site).hostname}: ${res.statusText}`))
+			.catch(() =>
+				axios.post(process.env.DISCORD_WEBHOOK, {
+					content: `<@${process.env.OWNERID}>`,
 					embeds: [{
 						title: "SITE IS DOWN",
-						description: `\`${domain}\` is down: ${res.status}`,
+						description: `${site} is down`,
 						color: 16013612
 					}]
-				});
-			console.log(`${domain}: ${res.status}`);
-		}).catch(e => console.log(e.message));
-	res.send("ok");
-});
+				})
+			);
+	res.write("ok");
+	res.end();
+}).listen(3000);
 
-app.listen(3000);
+console.log("Repl Pinger is now running!");

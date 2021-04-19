@@ -1,28 +1,28 @@
 {
-	"name": "pinger",
+	"name": "repl-pinger",
 	"version": "1.0.0",
-	"description": "Uptimerobot pinger on replit.com",
+	"description": "A Node.js application that relays UptimeRobot pings to repls on Replit.",
 	"main": "index.js",
 	"scripts": {
 		"start": "node .",
-		"dev": "nodemon -r dotenv/config"
+		"dev": "nodemon"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/MarsRon/pinger.git"
+		"url": "git+https://github.com/MarsRon/repl-pinger.git"
 	},
 	"author": "MarsRon",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/MarsRon/pinger/issues"
+		"url": "https://github.com/MarsRon/repl-pinger/issues"
 	},
-	"homepage": "https://github.com/MarsRon/pinger#readme",
+	"homepage": "https://github.com/MarsRon/repl-pinger#readme",
 	"dependencies": {
 		"axios": "^0.21.1",
-		"express": "^4.17.1"
+		"dotenv": "^8.2.0"
 	},
 	"devDependencies": {
-		"dotenv": "^8.2.0",
-		"eslint": "^7.23.0"
+		"eslint": "^7.24.0",
+		"nodemon": "^2.0.7"
 	}
 }
