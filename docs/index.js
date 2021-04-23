@@ -9,7 +9,7 @@ function createRipple({ currentTarget: button, clientX, clientY }) {
 	style.top = `${clientY - button.offsetTop - radius}px`;
 	ripple.classList.add("ripple");
 
-	setTimeout(() => ripple.remove(), 1000);
+	setTimeout(() => ripple.remove(), 600);
 
 	button.appendChild(ripple);
 }
@@ -19,12 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		button.onclick = createRipple;
 
 	// Rotate background gradient
-	const { style } = document.getElementById("title");
+	const { style } = document.getElementById("about"),
+		{ requestAnimationFrame: animate } = window;
 	let deg = 62;
-	setInterval(() => {
-		deg += 4;
+	const rotate = () => {
+		deg += 0.5;
 		if (deg >= 360)
 			deg = 0;
 		style.backgroundImage = `linear-gradient(${deg}deg, #3a3d40 0, #181719 100%)`;
-	}, 100);
+		animate(rotate);
+	};
+	animate(rotate);
 });
