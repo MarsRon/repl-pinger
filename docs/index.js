@@ -16,7 +16,7 @@ function createRipple({ currentTarget: button, clientX, clientY }) {
 
 document.addEventListener("DOMContentLoaded", () => {
 	for (const button of document.getElementsByTagName("a"))
-		button.onclick = createRipple;
+		button.onmousedown = createRipple;
 
 	// Rotate background gradient
 	const { style } = document.getElementById("about"),
