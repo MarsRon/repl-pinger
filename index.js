@@ -7,7 +7,7 @@ require("http").createServer(async (req, res) => {
 	res.end("okay");
 	for (const site of sites) {
 		try {
-			const siteRes = await head(site, { timeout: 10000 });
+			const siteRes = await head(site, { timeout: 20000 });
 			console.log(`${new Date().toISOString()} ${new URL(site).hostname}: ${siteRes.statusText}`);
 		} catch(e) {
 			console.log(`Website Down: ${new URL(site).hostname} - ${e.message}`);
