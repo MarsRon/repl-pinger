@@ -16,6 +16,7 @@
 	"plugins": [
 		"@typescript-eslint"
 	],
+	"ignorePatterns": "dist/*",
 	"rules": {
 		"indent": ["error", "tab"],
 		"quotes": ["error", "double"],
