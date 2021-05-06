@@ -10,7 +10,7 @@ A [Node.js](https://nodejs.org) application that relays [UptimeRobot](https://up
 
 2. Skip steps 3-4 with this command:
 ```sh
-rm main.sh;git clone https://github.com/MarsRon/repl-pinger .;npm i --only=prod
+rm main.sh;git clone https://github.com/MarsRon/repl-pinger .;npm i -D
 ```
 
 3. Delete `main.sh`.
@@ -20,7 +20,7 @@ rm main.sh;git clone https://github.com/MarsRon/repl-pinger .;npm i --only=prod
 git clone https://github.com/MarsRon/repl-pinger .
 ```
 
-5. Install dependencies, run `npm i --only=prod` in the shell.
+5. Install dependencies, run `npm i -D` in the shell.
 
 6. Go to the 🔒 Secrets tab, and referencing `.env.example`, add the environment variables one by one (Sorry, AFAIK there's no other way to add envvars).
 
