@@ -6,27 +6,27 @@ A [Node.js](https://nodejs.org) application that relays [UptimeRobot](https://up
 
 ## Installation
 
-1. Create a Bash repl on Replit (Bash repls have newer node and npm versions)
+1. Create a Bash repl on Replit (Bash repls have newer node and npm versions).
 
 2. Skip steps 3-4 with this command:
 ```sh
 rm main.sh;git clone https://github.com/MarsRon/repl-pinger .;npm i --only=prod
 ```
 
-3. Delete `main.sh`
+3. Delete `main.sh`.
 
 4. Clone the this GitHub repo by running this in the shell:
 ```sh
 git clone https://github.com/MarsRon/repl-pinger .
 ```
 
-5. Install dependencies, run `npm i --only=prod` in the shell
+5. Install dependencies, run `npm i --only=prod` in the shell.
 
-6. Go to the 🔒 Secrets tab, and referencing `.env.example`, add the environment variables one by one (Sorry, AFAIK there's no other way to add envvars)
+6. Go to the 🔒 Secrets tab, and referencing `.env.example`, add the environment variables one by one (Sorry, AFAIK there's no other way to add envvars).
 
-7. Start the repl and hope everything works
+7. Start the repl and hope everything works.
 
-8. Create a new account on [uptimerobot.com](https://uptimerobot.com/signUp?ref=website-header) if you haven't, then create a new monitor
+8. Create a new account on [uptimerobot.com](https://uptimerobot.com/signUp?ref=website-header) if you haven't, then create a new monitor.
 
 9. Apply these settings to it:
    - Monitor Type: HTTP(s)
@@ -34,9 +34,9 @@ git clone https://github.com/MarsRon/repl-pinger .
    - URL (or IP): https://[REPL_NAME].[USERNAME].replit.co
    - Monitoring Interval: every 5 minutes
 
-10. You might want to setup a Discord webhook for the monitor too, for which I suggest following [this useful guide](https://gist.github.com/Log1x/af2c1a9613d155477295f20eece406a3)
+10. You might want to setup a Discord webhook for the monitor too, for which I suggest following [this useful guide](https://gist.github.com/Log1x/af2c1a9613d155477295f20eece406a3).
 
-11. Hope that everything worked and have fun developing! 
+11. Hope that everything worked and have fun developing!
 
 
 
