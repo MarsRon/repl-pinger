@@ -16,7 +16,7 @@
 	"bugs": {
 		"url": "https://github.com/MarsRon/repl-pinger/issues"
 	},
-	"homepage": "https://marsron.github.io/repl-pinger/",
+	"homepage": "https://github.com/MarsRon/repl-pinger#readme",
 	"dependencies": {
 		"axios": "^0.21.1",
 		"dotenv": "^8.2.0",
