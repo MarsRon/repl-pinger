@@ -27,14 +27,15 @@ createServer(async (_req, svrRes) => {
 		} catch(err) {
 			// Log to console & Send Discord webhook
 			print(`Website Down: ${new URL(site).hostname} - ${err.message}`);
-			axios.post(DISCORD_WEBHOOK as string, {
-				content: `<@${OWNERID as string}>`,
-				embeds: [{
-					title: "SITE IS DOWN",
-					description: `${site} is down\nTimestamp: ${new Date().toISOString()}\nStatus: \`${err}\``,
-					color: 16013612
-				}]
-			}).catch(e => // Catch webhook error
+			const embeds = [{
+				title: "SITE IS DOWN",
+				description: `${site} is down\nTimestamp: ${new Date().toISOString()}\nStatus: \`${err}\``,
+				color: 16013612
+			}];
+			axios.post(
+				DISCORD_WEBHOOK as string,
+				OWNERID !== undefined ? { content: `<@${OWNERID as string}>`, embeds } : { embeds }
+			).catch(e => // Catch webhook error
 				print("Webhook Error: " + e.message)
 			);
 		}
