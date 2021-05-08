@@ -22,7 +22,7 @@ createServer(async (_req, svrRes) => {
 	for (const site of sites) {
 		try {
 			// Try pinging the site
-			const res = await axios.head(site, { timeout: 20000 });
+			const res = await axios.head(site, { timeout: 30000 });
 			print(`${new Date().toISOString()} ${new URL(site).hostname}: ${res.statusText}`);
 		} catch(err) {
 			// Log to console & Send Discord webhook
