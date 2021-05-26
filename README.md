@@ -34,7 +34,7 @@ rm main.sh;git clone https://github.com/MarsRon/repl-pinger .;npm i -D
 ## Links
 
 [![GitHub](https://img.shields.io/badge/Github-%23181711.svg?logo=github&style=flat-square&logoColor=white "GitHub")](https://github.com/MarsRon/repl-pinger#readme)
-[![Replit](https://img.shields.io/badge/Replit-%23667881.svg?&logo=repl.it&style=flat-square&logoColor=white "Replit")](https://replit.com/@MarsRon/repl-pinger)
+[![Replit](https://img.shields.io/badge/Replit-%23667881.svg?&logo=repl-dot-it&style=flat-square&logoColor=white "Replit")](https://replit.com/@MarsRon/repl-pinger)
 
 
 
