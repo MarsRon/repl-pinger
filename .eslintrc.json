@@ -1,9 +1,9 @@
 {
 	"env": {
-		"node": true,
-		"browser": true,
 		"commonjs": true,
-		"es2021": true
+		"es2021": true,
+		"node": true,
+		"browser": true
 	},
 	"extends": [
 		"eslint:recommended",
@@ -16,10 +16,23 @@
 	"plugins": [
 		"@typescript-eslint"
 	],
-	"ignorePatterns": "dist/*",
 	"rules": {
-		"indent": ["error", "tab"],
+		"indent": ["error", "tab", { "SwitchCase": 1 }],
 		"quotes": ["error", "double"],
-		"semi": ["error", "always"]
-	}
+		"semi": ["error", "always"],
+		"no-extra-semi": "error",
+		"space-before-function-paren": ["error", {
+			"anonymous": "always",
+			"named": "never",
+			"asyncArrow": "always"
+		}],
+		"eqeqeq": "error",
+		"no-duplicate-imports": "error",
+		"no-const-assign": "error",
+		"no-var": "error",
+		"no-this-before-super": "error",
+		"no-unreachable": "error",
+		"no-non-null-assertion": true
+	},
+	"ignorePatterns": "dist/*"
 }
