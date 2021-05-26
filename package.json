@@ -4,7 +4,8 @@
 	"description": "A Node.js application that relays UptimeRobot pings to repls on Replit.",
 	"main": "dist/index.js",
 	"scripts": {
-		"start": "npx tsc && node .",
+		"start": "node .",
+		"build": "npx tsc",
 		"dev": "nodemon --config nodemon.json src/index.ts"
 	},
 	"repository": {
