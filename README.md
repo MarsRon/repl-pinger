@@ -1,4 +1,4 @@
-# [Repl Pinger](https://github.com/MarsRon/repl-pinger)
+# [Repl Pinger](https://github.com/MarsRon/repl-pinger#readme)
 
 A [Node.js](https://nodejs.org) application that relays [UptimeRobot](https://uptimerobot.com) pings to repls on [Replit](https://replit.com).
 
@@ -10,7 +10,7 @@ A [Node.js](https://nodejs.org) application that relays [UptimeRobot](https://up
 
 2. Run this command in the Shell:
 ```sh
-rm main.sh;git clone https://github.com/MarsRon/repl-pinger .;npm i -D
+rm main.sh;git clone https://github.com/MarsRon/repl-pinger .;npm i -D;npm run build
 ```
 
 3. Go to the 🔒 Secrets tab, and referencing `.env.example`, add the environment variables one by one (Sorry, AFAIK there's no other way to add environment variables).
