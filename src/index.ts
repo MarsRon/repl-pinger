@@ -36,7 +36,7 @@ http.createServer((_req, svrRes) => {
 			// Check for status code
 			// Return if response isn't 40x or 50x error
 			const status = Number((error as string).slice(-3));
-			if (status < 400) return;
+			if (isNaN(status) || status < 400) return;
 
 			// Send Discord webhook
 			const embeds = [{
