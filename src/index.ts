@@ -56,9 +56,7 @@ http.createServer((_req, svrRes) => {
 
 	});
 
-})
-
-// Listen on port 3000
-.listen(3000, () =>
+}).listen(3000, () =>
+	// Listen on port 3000
 	console.log("Repl Pinger is now running on port 3000!")
 );
